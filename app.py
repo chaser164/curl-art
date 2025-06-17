@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 
 app = Flask(__name__)
 
@@ -251,7 +251,8 @@ def render_word(word):
 
 @app.route('/<word>')
 def emoji_art(word):
-    return render_word(word) + '\n'
+    art = render_word(word) + '\n'
+    return Response(art, mimetype='text/plain')
 
 if __name__ == '__main__':
     app.run(port=5500)
