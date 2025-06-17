@@ -1,3 +1,3 @@
 # CURL Art
 
-Make beautiful words in the command line
+Make beautiful words in the command line!
